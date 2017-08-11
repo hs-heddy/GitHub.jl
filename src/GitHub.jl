@@ -149,7 +149,7 @@ export # comments.jl
        create_comment,
        edit_comment,
        delete_comment
-       
+
 export # reviews.jl
        Review,
        reviews,
@@ -225,6 +225,7 @@ export # apps.jl
 
 export # installations.jl
        Installation,
-       create_access_token
+       create_access_token,
+       installations
 
 end # module GitHub

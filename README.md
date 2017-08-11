@@ -116,7 +116,7 @@ GitHub.jl implements a bunch of methods that make REST requests to GitHub's API.
 | `issue(repo, issue)`                     | `Issue`                            | [get the issue specified by `issue`](https://developer.github.com/v3/issues/#get-a-single-issue)                                                                                                            |
 | `issues(repo)`                           | `Tuple{Vector{Issue}, Dict}`       | [get `repo`'s issues](https://developer.github.com/v3/issues/#list-issues-for-a-repository)                                                                                                                 |
 | `create_issue(repo)`                     | `Issue`                            | [create an issue in `repo`](https://developer.github.com/v3/issues/#create-an-issue)                                                                                                                        |
-| `edit_issue(repo, issue)`                | `Issue`                            | [edit `issue` in `repo`](https://developer.github.com/v3/issues/#edit-an-issue)                                                                                              
+| `edit_issue(repo, issue)`                | `Issue`                            | [edit `issue` in `repo`](https://developer.github.com/v3/issues/#edit-an-issue)
 | `reviews(repo, pr)`                      | `Tuple{Vector{PullRequest}, Dict}` | [get a `pr`'s reviews](https://developer.github.com/v3/pulls/reviews/#list-reviews-on-a-pull-request)                                                                                                      |
 | `dismiss_review(repo, review)`           | `HttpCommon.Response`              | [dismiss `review` in `repo`](https://developer.github.com/v3/pulls/reviews/#dismiss-a-pull-request-review)                                                                                                                             |
 
@@ -184,6 +184,8 @@ GitHub.jl implements a bunch of methods that make REST requests to GitHub's API.
 | `app(id)`                               | `App`                             | [get the GitHub app with the specified `id`](https://developer.github.com/v3/apps/#get-a-single-github-app)   |
 | `app(slug)`                               | `App`                             | [get the GitHub app with the specified `slug`](https://developer.github.com/v3/apps/#get-a-single-github-app)   |
 | `app(;auth=auth)`                               | `App`                     | [get the GitHub app authenticated by the corresponding `auth`](https://developer.github.com/v3/apps/#get-the-authenticated-github-app)   |
+| `installations(auth)`                     | `Vector{Installation}`           | [get the installations for the GitHub app authenticated by the corresponding `auth`](https://developer.github.com/v3/apps/#find-installations)   |
+| `repos(i::Installation)`          | `Tuple{Vector{Repo}, Dict}`        | [get the active repositories for this installation](https://developer.github.com/v3/apps/#find-installations)   |
 
 #### Miscellaneous
 
